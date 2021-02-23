@@ -1,0 +1,127 @@
+.flip-card {
+
+}
+.quiz-area {
+    background-image: url("https://stepik.org/media/attachments/lesson/374893/world.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-container {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-flow: wrap row;
+    align-content: center;
+    justify-content: center;
+}
+/*.front {*/
+/*    font-family: 'Comfortaa', cursive;*/
+/*    color: coral;*/
+/*    width: 150px;*/
+/*    height: 150px;*/
+/*    margin: 3px;*/
+/*    background-color: #f9efe5;*/
+/*    text-align: center;*/
+/*    border-radius: 15px;*/
+/*}*/
+.title {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+/*body {*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    justify-content:center;*/
+/*    align-items: center;*/
+/*    background: #222;*/
+/*}*/
+
+/*.card{*/
+/*    height: 150px;*/
+/*    weight: 150px;*/
+/*    position: relative;*/
+/*    transition: all 1s linear;*/
+/*    transform-style: preserve-3d;*/
+/*}*/
+
+/*.front, .back{*/
+/*    height: 100%;*/
+/*    weight: 100%;*/
+/*    display: flex;*/
+/*    justify-content:center;*/
+/*    align-items: center;*/
+/*    font-size: 1em;*/
+/*    font-family: 'Lobster', cursive;*/
+/*    border-radius: 10px;*/
+/*    position: absolute;*/
+/*    backface-visibility: hidden;*/
+/*}*/
+
+/*.front{*/
+/*    background: #f9efe5;*/
+/*    z-index: 2;*/
+/*    backface-visibility: hidden;*/
+/*}*/
+/*.back{*/
+/*    background: brown;*/
+/*    z-index: 1;*/
+/*    transform: rotateY(180deg);*/
+/*}*/
+
+/*.container:hover .card{*/
+/*    transform: rotateY(180deg);*/
+/*}*/
+
+.flip-card {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #f9efe5;
+    color: #391919;
+    transform: rotateY(180deg);
+}
